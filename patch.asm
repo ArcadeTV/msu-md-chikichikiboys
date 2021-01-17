@@ -38,14 +38,19 @@ Game
 		org 	$32C							; bypass checksum checks
 		jmp 	$358
 		
+        org     $458                            ; mute music
+        nop
+        nop
+        nop
+        nop
 		
 		org 	$7A6
 		nop
 		jsr 	CustomPlaySound
 		rts
 		
-		;org 	$1A04							; CHEAT, unl.Energy 
-		;dc.w 	#$0000
+		org 	$1A04							; CHEAT, unl.Energy 
+		dc.w 	$0000
 		
 		org 	$100000
 MSUDRV
@@ -54,8 +59,8 @@ MSUDRV
 		
 		org 	$100750
 CustomPlaySound
-		move.b  d0,($C086).w
-		;move.b  d0,($C087).w
+		move.b  d0,($C086).w                ; sfx?
+		move.b  $00,($C087).w               ; music?
 ready
 		tst.b 	MCD_STAT
 		bne.s 	ready 						; Wait for Driver ready to receive cmd

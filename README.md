@@ -30,13 +30,13 @@ Compatibility  Works on real hardware with
 
 SourceROMs:    Chiki Chiki Boys (USA, Europe).md (CRC: 813a7d62)
 
-Date:          2029-09-16
+Date:          2020-09-16
 
 Category:      Romhack / Music
-Thanks:        SonicRetro, Dustin O'Dell, Krikzz, Conn
+Thanks:        Dustin O'Dell, Krikzz, Conn
 
 Soundpack:     based on the PC-Engine CD game 
-               >> https://www.mediafire.com/file/y1hzzmn0nvpdq0c/SoundPack_Sonic_Masa.bin/file
+               >> https://www.mediafire.com/file/kin0we88b668uj4/SoundPack_ChikiChikiBoys-PC-Engine.bin/file
                
 Source:        https://github.com/ArcadeTV/msu-md-chikichikiboys
 
@@ -49,7 +49,7 @@ Driver Source: https://github.com/krikzz/msu-md
 1. Obtain source ROM.
 2. Use the BPS patch file from the current release to patch your ROM. I recommend FLIPS. 
    -> https://dl.smwcentral.net/11474/floating.zip
-3. Download the SoundPacks and make sure the rom and cue files have identical base-filenames (eg. game.md and game.cue)
+3. Download the SoundPack and make sure the rom and cue files have identical base-filenames (eg. game.md and game.cue)
 4. Make sure all files are in the same folder
 5. If using an emulator, make sure you are using the correct CD bios files!
 ```   
