@@ -250,8 +250,8 @@ audio_init
 		nop
 		nop
 		nop
-		;tst.b 	d0							; if 1: no CD Hardware found
-		;bne		audio_init_fail				; Return without setting CD enabled
+		tst.b 	d0							; if 1: no CD Hardware found
+		bne		audio_init_fail				; Return without setting CD enabled
 		move.w 	#($1500|255),MCD_CMD		; Set CD Volume to MAX
 		addq.b 	#1,MCD_CMD_CK 				; Increment command clock
 		rts

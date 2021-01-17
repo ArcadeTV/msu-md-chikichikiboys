@@ -1,5 +1,8 @@
 ## Changelog 
 
+### v1.0 [2021-01-17]
+* fixed messed up sfx
+
 ### v0.1 [2021-01-17]
 * rebuilt the SoundPack with decreased volume (thanks to pyron)
 
