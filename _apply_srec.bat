@@ -1,0 +1,1 @@
+..\srecpatch.exe roms\CHIKI_UNTOUCHED_16M.BIN OUTPUT\CHIKI_PATCHED.BIN<srecfile.txt
