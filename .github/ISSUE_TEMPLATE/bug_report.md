@@ -7,6 +7,9 @@ assignees: ''
 
 ---
 
+**Patch version**
+Are you using the latest patch and soundPack?
+
 **Platform**
 Are you playing on an emulator or real hardware?
 Please type the name and version here. (e.g. RetroArch GenesisPlusGX 58758ae or MegaEDpro OS 4.08)
