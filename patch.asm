@@ -42,10 +42,7 @@ Game
         jmp     $358
         
         org     $458                            ; mute music
-        nop
-        nop
-        nop
-        nop
+        move.b  #00,($A01E01).l
         
         org     $7A6
         nop
@@ -134,6 +131,8 @@ find_track
         beq     play_track_28
         cmp.b   #$FF,d0                     ; Fade Track
         beq     fade_track
+        
+        rts
 
 play_track_1                                ; Main Theme
         move.w  #($1100|1),MCD_CMD          ; send cmd: play track #1, no loop
