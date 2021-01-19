@@ -29,14 +29,16 @@ Compatibility  Works on real hardware with
                (*untested on my end)
 
 SourceROMs:    Chiki Chiki Boys (USA, Europe).md (CRC: 813a7d62)
+               Patch includes PYRON's enhanced color hack:
+               https://www.romhacking.net/hacks/2888/ <- for reference, no additional patching needed
 
-Date:          2020-09-16
+Date:          2021-01-19
 
 Category:      Romhack / Music
 Thanks:        Dustin O'Dell, Krikzz, Conn
 
-Soundpack:     based on the PC-Engine CD game 
-               >> https://www.mediafire.com/file/kin0we88b668uj4/SoundPack_ChikiChikiBoys-PC-Engine.bin/file
+Soundpack:     based on the PC-Engine CD game *** CHANGED in v1.1, please reload ***
+               >> https://www.mediafire.com/file/oa9en5onerkiztp/SoundPack_ChikiChikiBoys-PC-Engine.bin/file
                
 Source:        https://github.com/ArcadeTV/msu-md-chikichikiboys
 
