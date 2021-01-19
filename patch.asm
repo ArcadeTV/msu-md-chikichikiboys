@@ -1,4 +1,4 @@
-PRODUCTION  set 0                           ; set to 0 for GENS compatibility (for debugging) and 1 when ready
+PRODUCTION  set 1                           ; set to 0 for GENS compatibility (for debugging) and 1 when ready
 CHEAT       set 0                           ; set to 1 for cheat enabled
 
 ; RAM Locations
@@ -29,6 +29,13 @@ MCD_CMD_CK      EQU $A1201F
         org     $100
         dc.b    'SEGA MEGASD     '              ; Make it compatible with MegaSD and GenesisPlusGX
         
+        org     $120
+        dc.b    'CHIKI CHIKI BOYS MSU-MD ARCADETV            v1.1'
+        org     $150
+        dc.b    'CHIKI CHIKI BOYS MSU-MD ARCADETV            v1.1'
+        org     $190
+        dc.b    'JUE'
+
         org     $1A4                            ; ROM_END
         dc.l    $001FFFFF                       ; Overwrite with 16 MBIT size
                 
@@ -49,10 +56,12 @@ Game
         jsr     CustomPlaySound
         rts
         
-        ifne    CHEAT
+        ifne    CHEAT                           ; assemble the following lines if <expression> is non-zero
         
-        org     $1A04                           ; CHEAT, unl.Energy 
-        dc.w    $0000
+        org     $5B04                           ; CHEAT, unl.Energy 
+        nop
+        nop
+        nop
         
         endif
         
