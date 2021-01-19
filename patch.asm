@@ -56,6 +56,13 @@ Game
         
         endif
         
+        
+        org     $27DE                           ; Pause ON
+        jsr     pauseOn
+
+        org     $2950
+        jsr     pauseOff                        ; Pause Off
+
 
         org     $100000
 MSUDRV
@@ -251,7 +258,26 @@ fade_track
         move.w  #($1300|75),MCD_CMD         ; send cmd: pause track
         addq.b  #1,MCD_CMD_CK               ; Increment command clock
         rts
+
+pause_track
+        move.w  #$1300,MCD_CMD              ; send cmd: pause track
+        addq.b  #1,MCD_CMD_CK               ; Increment command clock
+        rts
+resume_track
+        move.w  #$1400,MCD_CMD              ; send cmd: pause track
+        addq.b  #1,MCD_CMD_CK               ; Increment command clock
+        rts
         
+pauseOn
+        bset    #0,($F83A).w
+        jsr     pause_track
+        rts
+
+pauseOff
+        bclr    #0,($F83A).w
+        jsr     resume_track
+        rts
+
 audio_init
         jsr     MSUDRV
         nop
